@@ -142,26 +142,26 @@
 
         var dir = "JN/";
         var fileextension = ".JPG";
-        $.ajax({
-          //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-          url: dir,
-          success: function (data) {
-            //List all .png file names in the page
-            $(data)
-              .find("a:contains(" + fileextension + ")")
-              .each(function () {
-                var filename = this.href
-                  .replace(window.location.host, "")
-                  .replace("https://", "");
-                $(".photos").append("<img src='" + dir + filename + "'>");
-              });
-          },
-        });
+        // $.ajax({
+        //   //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+        //   url: dir,
+        //   success: function (data) {
+        //     //List all .png file names in the page
+        //     $(data)
+        //       .find("a:contains(" + fileextension + ")")
+        //       .each(function () {
+        //         var filename = this.href
+        //           .replace(window.location.host, "")
+        //           .replace("https://", "");
+        //         $(".photos").append("<img src='" + dir + filename + "'>");
+        //       });
+        //   },
+        // });
       });
 
-      /*    for(let i = 1; i<=16;i++){
-        $(".photos").append("<img src='JN/"+i+".JPG' />");
-      }*/
+      for (let i = 1; i <= 10; i++) {
+        $(".photos").append("<img src='JN/" + i + ".JPG' />");
+      }
     </script>
   </body>
 </html>

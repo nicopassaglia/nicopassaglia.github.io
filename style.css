@@ -264,8 +264,9 @@ footer {
 @media (max-width: 768px) {
   header {
     /*min-height: calc((100vw * 16)/9);*/
-    background-image: url("img/mobile.jpg");
-    background-size: 100% 100%;
+    background-image: url("img/mobile.jpg") !important;
+    background-size: 100% 100% !important;
+    background-attachment: initial !important;
   }
   .overlay-header p {
     font-size: 36px;

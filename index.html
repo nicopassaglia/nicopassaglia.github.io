@@ -152,7 +152,7 @@
               .each(function () {
                 var filename = this.href
                   .replace(window.location.host, "")
-                  .replace("http://", "");
+                  .replace("https://", "");
                 $(".photos").append("<img src='" + dir + filename + "'>");
               });
           },
